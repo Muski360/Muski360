@@ -26,6 +26,7 @@
     <img alt="Java" src="https://img.shields.io/badge/Java-007396?style=for-the-badge&amp;logo=openjdk&amp;logoColor=white">
     <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&amp;logo=javascript&amp;logoColor=black">
     <img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&amp;logo=php&amp;logoColor=white">
+    <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white">
   </p>
 
   <h4>🧩 Frameworks e bibliotecas</h4>
@@ -50,10 +51,11 @@
   <p>
     <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&amp;logo=docker&amp;logoColor=white">
     <img alt="Android Studio" src="https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&amp;logo=androidstudio&amp;logoColor=white">
+    <img alt="BlueStacks" src="https://custom-icon-badges.demolab.com/badge/BlueStacks-1F6FEB.svg?style=for-the-badge&amp;logo=stack&amp;logoColor=white">
+    <img alt="Discord" src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&amp;logo=discord&amp;logoColor=white">
     <img alt="Audacity" src="https://img.shields.io/badge/Audacity-0000CC?style=for-the-badge&amp;logo=audacity&amp;logoColor=white">
     <img alt="Adobe Photoshop" src="https://custom-icon-badges.demolab.com/badge/Photoshop-31A8FF.svg?style=for-the-badge&amp;logo=adobephotoshop&amp;logoColor=white">
     <img alt="Adobe Premiere Pro" src="https://custom-icon-badges.demolab.com/badge/Premiere_Pro-9999FF.svg?style=for-the-badge&amp;logo=pr&amp;logoColor=white">
-    <img alt="Brave" src="https://img.shields.io/badge/Brave-FB542B?style=for-the-badge&amp;logo=brave&amp;logoColor=white">
     <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&amp;logo=git&amp;logoColor=white">
     <img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white">
     <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&amp;logo=postman&amp;logoColor=white">
