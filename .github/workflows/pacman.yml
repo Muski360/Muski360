@@ -1,0 +1,41 @@
+name: Generate Pac-Man contribution graph
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # Daily at 03:15 UTC. Change this cron to adjust the update time.
+    - cron: "15 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pacman-contribution-graph
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Generate light and dark SVGs
+        # Pinned from abozanona/pacman-contribution-graph main on 2026-09-01.
+        uses: abozanona/pacman-contribution-graph@7332e1de7903ab780c3692a4127a59cc13872daa
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          games: pacman
+          player_style: opportunistic # opportunistic | conservative | aggressive
+          hide_month_labels: "true"
+
+      - name: Publish SVGs to the output branch
+        # crazy-max/ghaction-github-pages v4.2.0, pinned for reproducible builds.
+        uses: crazy-max/ghaction-github-pages@df5cc2bfa78282ded844b354faee141f06b41865
+        with:
+          build_dir: dist
+          target_branch: output
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

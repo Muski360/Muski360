@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 190" role="img" aria-labelledby="title description">
+  <title id="title">Muski profile introduction</title>
+  <desc id="description">A terminal-style typing animation introducing Muski as a Computer Science student.</desc>
+
+  <!-- EDIT COLORS: terminal text, secondary text, and accent. -->
+  <style>
+    .text { fill: #f0f6fc; font: 24px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+    .muted { fill: #8b949e; font: 14px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+    .prompt { fill: #3fb950; font-weight: 700; }
+    .rule { stroke: #30363d; }
+    .cursor { fill: #3fb950; }
+    .static-copy { display: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animated-copy { display: none; }
+      .static-copy { display: inline; }
+      .cursor { display: none; }
+    }
+  </style>
+
+  <defs>
+    <clipPath id="line-1">
+      <rect x="58" y="45" width="0" height="32">
+        <animate attributeName="width" values="0;13;26;40;53;66;79;92;106;119;132;145;158;172;185;198;211;224" calcMode="discrete" dur="1.45s" begin="0.35s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <clipPath id="line-2">
+      <rect x="58" y="85" width="0" height="32">
+        <animate attributeName="width" values="0;13;26;40;53;66;79;92;106;119;132;145;158;172;185;198;211;224;238;251;264;277;290;304;317" calcMode="discrete" dur="1.8s" begin="2.05s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <clipPath id="line-3">
+      <rect x="58" y="125" width="0" height="32">
+        <animate attributeName="width" values="0;13;26;40;53;66;79;92;106;119;132;145;158;172;185;198;211;224;238;251;264;277;290;304;317;330;343" calcMode="discrete" dur="1.95s" begin="4.1s" fill="freeze"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <text class="muted" x="20" y="22">muski@github:~</text>
+  <line class="rule" x1="20" y1="34" x2="880" y2="34"/>
+
+  <!-- EDIT TEXT: keep the character counts close to the originals, or adjust the clip widths above. -->
+  <g class="text animated-copy">
+    <text x="20" y="70" class="prompt">$</text>
+    <text x="58" y="70" clip-path="url(#line-1)">Hello, I'm Muski.</text>
+    <text x="20" y="110" class="prompt">›</text>
+    <text x="58" y="110" clip-path="url(#line-2)">Computer Science student</text>
+    <text x="20" y="150" class="prompt">›</text>
+    <text x="58" y="150" clip-path="url(#line-3)">Building things with code.</text>
+  </g>
+
+  <g class="text static-copy">
+    <text x="20" y="70" class="prompt">$</text><text x="58" y="70">Hello, I'm Muski.</text>
+    <text x="20" y="110" class="prompt">›</text><text x="58" y="110">Computer Science student</text>
+    <text x="20" y="150" class="prompt">›</text><text x="58" y="150">Building things with code.</text>
+  </g>
+
+  <rect class="cursor" x="407" y="128" width="3" height="25" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.01s" begin="6.1s" fill="freeze"/>
+    <animate attributeName="opacity" values="1;0;1" calcMode="discrete" dur="0.9s" begin="6.11s" repeatCount="indefinite"/>
+  </rect>
+</svg>
