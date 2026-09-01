@@ -1,4 +1,4 @@
-name: Generate Pac-Man contribution graph
+name: Generate profile activity graphics
 
 on:
   push:
@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: pacman-contribution-graph
+  group: profile-activity-graphics
   cancel-in-progress: true
 
 jobs:
@@ -30,6 +30,23 @@ jobs:
           games: pacman
           player_style: opportunistic # opportunistic | conservative | aggressive
           hide_month_labels: "true"
+
+      - name: Generate light activity graph
+        # Pinned from maurodesouza/github-readme-activity-graph-action main on 2026-09-01.
+        uses: maurodesouza/github-readme-activity-graph-action@9b38b03cac7ffb9f093a82f0ea9c634d5df62297
+        with:
+          username: ${{ github.repository_owner }}
+          options: "bg_color=ffffff&color=24292f&line=1f883d&point=0969da&area=true&hide_border=true&custom_title=Atividade%20recente"
+          output_path: dist/activity-graph-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate dark activity graph
+        uses: maurodesouza/github-readme-activity-graph-action@9b38b03cac7ffb9f093a82f0ea9c634d5df62297
+        with:
+          username: ${{ github.repository_owner }}
+          options: "bg_color=0d1117&color=c9d1d9&line=3fb950&point=58a6ff&area=true&hide_border=true&custom_title=Atividade%20recente"
+          output_path: dist/activity-graph-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish SVGs to the output branch
         # crazy-max/ghaction-github-pages v4.2.0, pinned for reproducible builds.
